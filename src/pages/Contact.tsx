@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -68,6 +69,21 @@ const Contact = () => {
                       required
                       className="transition-all focus:scale-105"
                     />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="reason">Reason for Contact</Label>
+                    <Select>
+                      <SelectTrigger className="transition-all focus:scale-105">
+                        <SelectValue placeholder="Select reason" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="general">General Inquiry</SelectItem>
+                        <SelectItem value="driver">Driver Signup</SelectItem>
+                        <SelectItem value="safety">Safety Concern</SelectItem>
+                        <SelectItem value="support">Customer Support</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div className="space-y-2">
