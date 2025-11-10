@@ -17,29 +17,29 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 180 70% 45%;
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 330 70% 60%;
+    --secondary: 270 50% 70%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 180 20% 96%;
+    --muted: 160 20% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 330 60% 95%;
-    --accent-foreground: 330 70% 30%;
+    --accent: 270 60% 95%;
+    --accent-foreground: 270 50% 30%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 180 20% 90%;
-    --input: 180 20% 90%;
-    --ring: 180 70% 45%;
+    --border: 160 20% 90%;
+    --input: 160 20% 90%;
+    --ring: 160 84% 39%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(180 70% 45%) 0%, hsl(330 70% 60%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(270 50% 70%) 100%);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -54,24 +54,24 @@ All colors MUST be HSL.
     --popover: 215 28% 14%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 180 70% 50%;
+    --primary: 160 80% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 330 70% 55%;
+    --secondary: 270 50% 60%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 215 25% 20%;
     --muted-foreground: 215 10% 65%;
 
-    --accent: 330 40% 25%;
-    --accent-foreground: 330 70% 85%;
+    --accent: 270 40% 25%;
+    --accent-foreground: 270 50% 85%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 215 25% 20%;
     --input: 215 25% 20%;
-    --ring: 180 70% 50%;
+    --ring: 160 80% 45%;
   }
 }
 

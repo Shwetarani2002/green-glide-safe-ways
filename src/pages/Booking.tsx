@@ -6,14 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { CalendarIcon, MapPin, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
 
 const Booking = () => {
   const [date, setDate] = useState<Date>();
-  const [driverPreference, setDriverPreference] = useState("female");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -123,27 +121,6 @@ const Booking = () => {
                         required
                       />
                     </div>
-                  </div>
-
-                  {/* Driver Preference */}
-                  <div className="space-y-3">
-                    <Label>Preferred Driver</Label>
-                    <RadioGroup value={driverPreference} onValueChange={setDriverPreference}>
-                      <div className="flex items-center space-x-3 p-4 border-2 rounded-lg hover:border-primary transition-colors cursor-pointer">
-                        <RadioGroupItem value="female" id="female" />
-                        <Label htmlFor="female" className="flex-1 cursor-pointer">
-                          <div className="font-semibold">Female Driver</div>
-                          <div className="text-sm text-muted-foreground">Connect with verified women drivers for added comfort</div>
-                        </Label>
-                      </div>
-                      <div className="flex items-center space-x-3 p-4 border-2 rounded-lg hover:border-primary transition-colors cursor-pointer">
-                        <RadioGroupItem value="any" id="any" />
-                        <Label htmlFor="any" className="flex-1 cursor-pointer">
-                          <div className="font-semibold">Any Driver</div>
-                          <div className="text-sm text-muted-foreground">No preference, all drivers are verified and professional</div>
-                        </Label>
-                      </div>
-                    </RadioGroup>
                   </div>
 
                   {/* Contact Info */}
