@@ -4,17 +4,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Leaf, Shield, Clock, Users, MapPin, Navigation, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const [datetime, setDatetime] = useState("");
 
   const handleQuickBook = () => {
-    // Navigate to booking page or handle booking
-    console.log("Quick booking:", { pickup, dropoff, datetime });
+    // Navigate to booking page with the data
+    navigate("/booking", { state: { pickup, dropoff, datetime } });
   };
 
   const features = [
@@ -229,16 +230,22 @@ const Home = () => {
             Join thousands of satisfied customers who have made the switch to safer, greener rides.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Link to="/booking">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-full font-semibold hover:scale-105 transition-transform">
-                Book a Ride Now
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all">
-                Explore Services
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-lg px-8 py-6 rounded-full font-semibold hover:scale-105 transition-transform"
+              onClick={() => navigate("/booking")}
+            >
+              Book Your Safe Ride
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all"
+              onClick={() => navigate("/services")}
+            >
+              Explore Services
+            </Button>
           </div>
         </div>
       </section>
