@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Booking from "./pages/Booking";
-import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +25,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/booking" element={<Booking />} />
-            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
