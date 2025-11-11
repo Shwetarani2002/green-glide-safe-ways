@@ -14,8 +14,8 @@ const Home = () => {
   const [datetime, setDatetime] = useState("");
 
   const handleQuickBook = () => {
-    // Navigate to booking page with the data
-    navigate("/booking", { state: { pickup, dropoff, datetime } });
+    // Navigate to pricing page with the data
+    navigate("/pricing");
   };
 
   const features = [
@@ -208,9 +208,9 @@ const Home = () => {
                   </Button>
 
                   <p className="text-center text-sm text-muted-foreground">
-                    Need more options?{" "}
-                    <Link to="/booking" className="text-primary hover:underline font-semibold">
-                      Go to full booking page
+                    Need subscription plans?{" "}
+                    <Link to="/pricing" className="text-primary hover:underline font-semibold">
+                      View pricing options
                     </Link>
                   </p>
                 </div>
@@ -234,9 +234,9 @@ const Home = () => {
               size="lg" 
               variant="secondary" 
               className="text-lg px-8 py-6 rounded-full font-semibold hover:scale-105 transition-transform"
-              onClick={() => navigate("/booking")}
+              onClick={() => navigate("/pricing")}
             >
-              Book Your Safe Ride
+              View Pricing Plans
             </Button>
             <Button 
               size="lg" 
