@@ -155,23 +155,16 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            {/* Google Form Embed */}
-            <div className="mt-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <Card className="border-2 shadow-xl overflow-hidden">
-                <CardContent className="p-0">
-                  <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfuANuRlvm7qAhpEBix3bScRZQFlpHj32PbvffEC5ZnNJGVNg/viewform?embedded=true"
-                    width="100%"
-                    height="800"
-                    frameBorder="0"
-                    marginHeight={0}
-                    marginWidth={0}
-                    className="w-full"
-                  >
-                    Loading…
-                  </iframe>
-                </CardContent>
-              </Card>
+            {/* Google Form Button */}
+            <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 font-semibold hover:scale-105 transition-transform"
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfuANuRlvm7qAhpEBix3bScRZQFlpHj32PbvffEC5ZnNJGVNg/viewform?usp=header", "_blank")}
+              >
+                Fill Booking Form
+              </Button>
             </div>
           </div>
         </div>
