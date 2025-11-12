@@ -75,68 +75,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* GPS Tracking Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Real-Time GPS Tracking</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Track your ride in real-time and share your journey with loved ones for complete peace of mind.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Navigation className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Live Location Tracking</h3>
-                  <p className="text-muted-foreground">
-                    Monitor your driver's location in real-time from pickup to drop-off with our advanced GPS system.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Share Your Trip</h3>
-                  <p className="text-muted-foreground">
-                    Share your trip details and live location with family and friends for added safety and transparency.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">SOS Emergency Button</h3>
-                  <p className="text-muted-foreground">
-                    Quick access to emergency services with our integrated SOS button available throughout your journey.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-muted rounded-2xl p-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Navigation className="h-16 w-16 text-primary mx-auto mb-4 animate-pulse" />
-                  <p className="text-lg font-semibold text-foreground">GPS Tracking Visualization</p>
-                  <p className="text-sm text-muted-foreground mt-2">Interactive map coming soon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Quick Booking Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -216,6 +154,25 @@ const Home = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Google Form Embed */}
+            <div className="mt-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <Card className="border-2 shadow-xl overflow-hidden">
+                <CardContent className="p-0">
+                  <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfuANuRlvm7qAhpEBix3bScRZQFlpHj32PbvffEC5ZnNJGVNg/viewform?embedded=true"
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    className="w-full"
+                  >
+                    Loading…
+                  </iframe>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
