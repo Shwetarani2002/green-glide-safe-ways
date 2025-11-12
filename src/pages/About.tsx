@@ -39,7 +39,7 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-8 text-center animate-fade-in">Our Story</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground animate-fade-in">
               <p className="text-lg leading-relaxed mb-6">
-                EcoRide was born from a simple yet powerful vision: to create a transportation service that prioritizes both people and the planet. Founded in 2023, we recognized the growing need for safer, more sustainable urban mobility solutions, especially for women and environmentally conscious travelers.
+                EcoRide was born from a simple yet powerful vision: to create a transportation service that prioritizes both people and the planet. Founded in 2025, we recognized the growing need for safer, more sustainable urban mobility solutions, especially for women and environmentally conscious travelers.
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 What started as a small fleet of electric vehicles in Lucknow has grown into a trusted transportation partner for thousands. Our commitment to women's safety, environmental responsibility, and exceptional service has made us the preferred choice for modern commuters.

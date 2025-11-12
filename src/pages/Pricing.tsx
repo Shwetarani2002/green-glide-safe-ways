@@ -20,6 +20,24 @@ const Pricing = () => {
       ],
     },
     {
+      name: "EV Subscription",
+      price: "₹4,999/month",
+      description: "Premium EV experience",
+      badge: "EV Special",
+      features: [
+        "Unlimited rides up to 800km",
+        "₹10/km after limit",
+        "Latest EV models",
+        "Free charging support",
+        "Priority EV booking",
+        "Verified women drivers",
+        "GPS tracking & SOS",
+        "24/7 premium support",
+        "Carbon offset certificate",
+        "EV maintenance included",
+      ],
+    },
+    {
       name: "Monthly Plan",
       price: "₹2,999/month",
       description: "Best for regular commuters",
@@ -89,7 +107,7 @@ const Pricing = () => {
       {/* Pricing Cards */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {plans.map((plan, index) => (
               <Card
                 key={index}
