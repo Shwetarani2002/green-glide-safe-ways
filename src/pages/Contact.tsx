@@ -116,7 +116,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                      <p className="text-muted-foreground">+91 9876543210</p>
+                      <p className="text-muted-foreground">9005036117</p>
                       <p className="text-sm text-muted-foreground mt-1">Mon-Sun, 24/7 Support</p>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Email</h3>
-                      <p className="text-muted-foreground">support@ecoride.com</p>
+                      <p className="text-muted-foreground">shwetarani7788@gmail.com</p>
                       <p className="text-sm text-muted-foreground mt-1">We'll respond within 24 hours</p>
                     </div>
                   </div>
@@ -145,10 +145,9 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Office</h3>
+                      <h3 className="font-semibold text-lg mb-1">Address</h3>
                       <p className="text-muted-foreground">
-                        Hazratganj, Lucknow<br />
-                        Uttar Pradesh 226001, India
+                        Lucknow
                       </p>
                     </div>
                   </div>
@@ -178,13 +177,20 @@ const Contact = () => {
             <p className="text-lg text-muted-foreground">Visit our office in Lucknow</p>
           </div>
           <div className="bg-background rounded-2xl shadow-lg overflow-hidden animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                <p className="text-lg font-semibold">Interactive Map</p>
-                <p className="text-sm text-muted-foreground mt-2">Map integration coming soon</p>
+            <a 
+              href="https://maps.app.goo.gl/mVbfysGuE4xbzv5k6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center hover:from-primary/20 hover:to-secondary/20 transition-all cursor-pointer">
+                <div className="text-center">
+                  <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
+                  <p className="text-lg font-semibold">View Location on Google Maps</p>
+                  <p className="text-sm text-muted-foreground mt-2">Click to open in Google Maps</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
