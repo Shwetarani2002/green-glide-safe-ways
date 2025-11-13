@@ -169,31 +169,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4">Find Us</h2>
-            <p className="text-lg text-muted-foreground">Visit our office in Lucknow</p>
-          </div>
-          <div className="bg-background rounded-2xl shadow-lg overflow-hidden animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <a 
-              href="https://maps.app.goo.gl/mVbfysGuE4xbzv5k6" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center hover:from-primary/20 hover:to-secondary/20 transition-all cursor-pointer">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                  <p className="text-lg font-semibold">View Location on Google Maps</p>
-                  <p className="text-sm text-muted-foreground mt-2">Click to open in Google Maps</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
