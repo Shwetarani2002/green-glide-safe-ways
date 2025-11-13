@@ -121,7 +121,14 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full hover:scale-105 transition-transform">
+                  <Button 
+                    className="w-full hover:scale-105 transition-transform"
+                    onClick={() => {
+                      const subject = `Interested in ${plan.name}`;
+                      const body = `Hi, I would like to subscribe to the ${plan.name} (${plan.price}).%0D%0A%0D%0APlease provide me with more details.%0D%0A%0D%0AThank you!`;
+                      window.location.href = `mailto:Shwetarani7788@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                    }}
+                  >
                     Choose Plan
                   </Button>
                 </CardContent>
