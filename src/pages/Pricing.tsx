@@ -6,44 +6,28 @@ import { Check } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Daily Rides",
-      price: "₹15/km",
-      description: "Perfect for occasional trips",
+      name: "Daily Subscription",
+      price: "₹99/day",
+      description: "Perfect for daily commuters",
       badge: null,
       features: [
-        "Pay per ride",
-        "No commitment",
+        "Unlimited rides up to 50km/day",
+        "₹15/km after limit",
         "100% Electric vehicles",
         "Verified women drivers",
-        "GPS tracking",
-        "24/7 support",
-      ],
-    },
-    {
-      name: "EV Subscription",
-      price: "₹4,999/month",
-      description: "Premium EV experience",
-      badge: "EV Special",
-      features: [
-        "Unlimited rides up to 800km",
-        "₹10/km after limit",
-        "Latest EV models",
-        "Free charging support",
-        "Priority EV booking",
-        "Verified women drivers",
         "GPS tracking & SOS",
-        "24/7 premium support",
-        "Carbon offset certificate",
-        "EV maintenance included",
+        "24/7 support",
+        "No long-term commitment",
+        "Cancel anytime",
       ],
     },
     {
-      name: "Monthly Plan",
-      price: "₹2,999/month",
+      name: "1 Month Plan",
+      price: "₹2,499/month",
       description: "Best for regular commuters",
       badge: "Popular",
       features: [
-        "Unlimited rides up to 500km",
+        "Unlimited rides up to 600km",
         "₹12/km after limit",
         "Priority booking",
         "100% Electric vehicles",
@@ -51,32 +35,35 @@ const Pricing = () => {
         "GPS tracking & SOS",
         "24/7 premium support",
         "Ride sharing option",
+        "5% discount on extra km",
       ],
     },
     {
-      name: "3-Month Plan",
-      price: "₹7,999",
-      description: "Save ₹1,000 with quarterly plan",
+      name: "3 Month Plan",
+      price: "₹6,999",
+      description: "Save ₹500 per month",
       badge: "Best Value",
       features: [
-        "Unlimited rides up to 1,500km",
+        "Unlimited rides up to 1,800km",
         "₹10/km after limit",
-        "Priority booking",
+        "VIP priority booking",
         "100% Electric vehicles",
         "Verified women drivers",
         "GPS tracking & SOS",
         "24/7 premium support",
         "Family sharing (2 members)",
         "Free outstation trip (once)",
+        "10% discount on extra km",
+        "Flexible monthly rollover",
       ],
     },
     {
-      name: "6-Month Plan",
-      price: "₹14,999",
-      description: "Maximum savings for long-term",
+      name: "6 Month Plan",
+      price: "₹12,999",
+      description: "Maximum savings & benefits",
       badge: "Premium",
       features: [
-        "Unlimited rides up to 3,000km",
+        "Unlimited rides up to 3,600km",
         "₹8/km after limit",
         "VIP priority booking",
         "100% Electric vehicles",
@@ -84,8 +71,11 @@ const Pricing = () => {
         "GPS tracking & SOS",
         "24/7 dedicated support",
         "Family sharing (4 members)",
-        "Free outstation trips (2 times)",
-        "Airport pickups included",
+        "Free outstation trips (3 times)",
+        "Airport pickups included (2x)",
+        "15% discount on extra km",
+        "Flexible monthly rollover",
+        "Premium EV models access",
       ],
     },
   ];
@@ -107,7 +97,7 @@ const Pricing = () => {
       {/* Pricing Cards */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, index) => (
               <Card
                 key={index}
