@@ -1,23 +1,11 @@
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Leaf, Shield, Clock, Users, MapPin, Navigation, Calendar } from "lucide-react";
+import { Leaf, Shield, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { openBookingForm } from "@/lib/googleForm";
 
 const Home = () => {
-  const [pickup, setPickup] = useState("");
-  const [dropoff, setDropoff] = useState("");
-  const [datetime, setDatetime] = useState("");
-
-  const handleQuickBook = () => {
-    // Open Google Form with pre-filled data
-    openBookingForm({ pickup, dropoff, datetime });
-  };
-
   const features = [
     {
       icon: Leaf,
@@ -75,129 +63,70 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Quick Booking Section */}
-      <section className="py-20 bg-muted">
+      {/* Our Services */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Ride Booking Form</h2>
-            <p className="text-lg text-muted-foreground">
-              Quick and easy booking - get started in seconds
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From quick city rides to long-distance journeys, we've got you covered.
             </p>
           </div>
 
-            <Card className="border-2 shadow-xl animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="pickup" className="text-base font-semibold">
-                      Pickup Location
-                    </Label>
-                    <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                      <Input
-                        id="pickup"
-                        placeholder="Enter pickup location"
-                        value={pickup}
-                        onChange={(e) => setPickup(e.target.value)}
-                        className="pl-10 h-12"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="dropoff" className="text-base font-semibold">
-                      Drop-off Location
-                    </Label>
-                    <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                      <Input
-                        id="dropoff"
-                        placeholder="Enter drop-off location"
-                        value={dropoff}
-                        onChange={(e) => setDropoff(e.target.value)}
-                        className="pl-10 h-12"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="datetime" className="text-base font-semibold">
-                      Date & Time
-                    </Label>
-                    <div className="relative">
-                      <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                      <Input
-                        id="datetime"
-                        type="datetime-local"
-                        value={datetime}
-                        onChange={(e) => setDatetime(e.target.value)}
-                        className="pl-10 h-12"
-                      />
-                    </div>
-                  </div>
-
-                  <Button
-                    onClick={handleQuickBook}
-                    size="lg"
-                    className="w-full h-12 text-lg font-semibold hover:scale-105 transition-transform"
-                  >
-                    Book Now
-                  </Button>
-
-                  <p className="text-center text-sm text-muted-foreground">
-                    Need subscription plans?{" "}
-                    <Link to="/pricing" className="text-primary hover:underline font-semibold">
-                      View pricing options
-                    </Link>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Google Form Button */}
-            <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 font-semibold hover:scale-105 transition-transform"
-                onClick={() => openBookingForm()}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "City Rides",
+                description: "Quick and convenient rides around the city",
+                icon: "🚗",
+              },
+              {
+                title: "Rental Packages",
+                description: "Flexible hourly and daily rental options",
+                icon: "📅",
+              },
+              {
+                title: "Outstation Trips",
+                description: "Comfortable long-distance travel",
+                icon: "🗺️",
+              },
+            ].map((service, index) => (
+              <Card
+                key={index}
+                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg animate-fade-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                Fill Booking Form
-              </Button>
-            </div>
+                <CardContent className="p-8 text-center">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  <Link to="/services">
+                    <Button variant="outline" className="w-full">
+                      Learn More
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Ready to Experience the Future of Transportation?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto animate-fade-in">
-            Join thousands of satisfied customers who have made the switch to safer, greener rides.
+        <div className="container mx-auto px-4 text-center animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Book Your Ride?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Quick and easy booking - get started in seconds with our ride booking form.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button 
-              size="lg" 
-              variant="secondary" 
-              className="text-lg px-8 py-6 rounded-full font-semibold hover:scale-105 transition-transform"
-              onClick={() => openBookingForm()}
-            >
-              Book Your Ride Now
-            </Button>
-            <Link to="/pricing">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all"
-              >
-                View Pricing Plans
-              </Button>
-            </Link>
-          </div>
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="text-lg px-8 py-6"
+            onClick={() => openBookingForm()}
+          >
+            Open Ride Booking Form
+          </Button>
         </div>
       </section>
     </div>
