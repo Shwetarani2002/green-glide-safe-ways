@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { openBookingForm } from "@/lib/googleForm";
 
 const Pricing = () => {
   const plans = [
@@ -123,11 +124,7 @@ const Pricing = () => {
                   </ul>
                   <Button 
                     className="w-full hover:scale-105 transition-transform"
-                    onClick={() => {
-                      const subject = `Interested in ${plan.name}`;
-                      const body = `Hi, I would like to subscribe to the ${plan.name} (${plan.price}).%0D%0A%0D%0APlease provide me with more details.%0D%0A%0D%0AThank you!`;
-                      window.location.href = `mailto:Shwetarani7788@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-                    }}
+                    onClick={() => openBookingForm({ planName: plan.name })}
                   >
                     Choose Plan
                   </Button>

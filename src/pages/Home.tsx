@@ -4,18 +4,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Leaf, Shield, Clock, Users, MapPin, Navigation, Calendar } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { openBookingForm } from "@/lib/googleForm";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const [datetime, setDatetime] = useState("");
 
   const handleQuickBook = () => {
-    // Navigate to pricing page with the data
-    navigate("/pricing");
+    // Open Google Form with pre-filled data
+    openBookingForm({ pickup, dropoff, datetime });
   };
 
   const features = [
@@ -79,12 +79,12 @@ const Home = () => {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Book Your Ride</h2>
-              <p className="text-lg text-muted-foreground">
-                Quick and easy booking - get started in seconds
-              </p>
-            </div>
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Ride Booking Form</h2>
+            <p className="text-lg text-muted-foreground">
+              Quick and easy booking - get started in seconds
+            </p>
+          </div>
 
             <Card className="border-2 shadow-xl animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <CardContent className="p-8">
@@ -161,7 +161,7 @@ const Home = () => {
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 py-6 font-semibold hover:scale-105 transition-transform"
-                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfuANuRlvm7qAhpEBix3bScRZQFlpHj32PbvffEC5ZnNJGVNg/viewform?usp=header", "_blank")}
+                onClick={() => openBookingForm()}
               >
                 Fill Booking Form
               </Button>
@@ -184,18 +184,19 @@ const Home = () => {
               size="lg" 
               variant="secondary" 
               className="text-lg px-8 py-6 rounded-full font-semibold hover:scale-105 transition-transform"
-              onClick={() => navigate("/pricing")}
+              onClick={() => openBookingForm()}
             >
-              View Pricing Plans
+              Book Your Ride Now
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-lg px-8 py-6 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all"
-              onClick={() => navigate("/services")}
-            >
-              Explore Services
-            </Button>
+            <Link to="/pricing">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-6 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all"
+              >
+                View Pricing Plans
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
