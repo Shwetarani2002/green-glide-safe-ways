@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Navigation } from "lucide-react";
-import { Link } from "react-router-dom";
+import { openBookingForm } from "@/lib/googleForm";
 
 const Services = () => {
   const services = [
@@ -82,11 +82,12 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/booking">
-                    <Button className="w-full group-hover:scale-105 transition-transform">
-                      Book Now
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="w-full group-hover:scale-105 transition-transform"
+                    onClick={() => openBookingForm({ serviceType: service.title })}
+                  >
+                    Book Now
+                  </Button>
                 </CardContent>
               </Card>
             ))}
