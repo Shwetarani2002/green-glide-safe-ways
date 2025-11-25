@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "@/components/NavLink";
-import { Menu, X, Car } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import energoLogo from "@/assets/energo_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-2 text-2xl font-bold text-primary hover:scale-105 transition-transform">
-            <Car className="h-8 w-8" />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              EcoRide
-            </span>
+          <NavLink to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src={energoLogo} alt="Energo" className="h-12 w-auto" />
           </NavLink>
 
           {/* Desktop Navigation */}

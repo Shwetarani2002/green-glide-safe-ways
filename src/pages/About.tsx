@@ -25,7 +25,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">About EcoRide</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">About Energo</h1>
           <p className="text-xl max-w-3xl mx-auto animate-fade-in">
             Revolutionizing transportation with safety, sustainability, and service at our core.
           </p>
@@ -39,13 +39,13 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-8 text-center animate-fade-in">Our Story</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground animate-fade-in">
               <p className="text-lg leading-relaxed mb-6">
-                EcoRide was born from a simple yet powerful vision: to create a transportation service that prioritizes both people and the planet. Founded in 2025, we recognized the growing need for safer, more sustainable urban mobility solutions, especially for women and environmentally conscious travelers.
+                Energo was born from a simple yet powerful vision: to create a transportation service that prioritizes both people and the planet. Founded in 2025, we recognized the growing need for safer, more sustainable urban mobility solutions, especially for women and environmentally conscious travelers.
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 What started as a small fleet of electric vehicles in Lucknow has grown into a trusted transportation partner for thousands. Our commitment to women's safety, environmental responsibility, and exceptional service has made us the preferred choice for modern commuters.
               </p>
               <p className="text-lg leading-relaxed">
-                Today, we continue to innovate and expand, always keeping our core values at the forefront of everything we do. Every ride with EcoRide is more than just a journey—it's a statement for a better, safer, and cleaner tomorrow.
+                Today, we continue to innovate and expand, always keeping our core values at the forefront of everything we do. Every ride with Energo is more than just a journey—it's a statement for a better, safer, and cleaner tomorrow.
               </p>
             </div>
           </div>
