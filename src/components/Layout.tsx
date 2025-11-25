@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-sm">
-              © {new Date().getFullYear()} EcoRide. All rights reserved.
+              © {new Date().getFullYear()} Energo. All rights reserved.
             </p>
             <p className="text-xs mt-2 opacity-80">
               Safe, Sustainable, and Reliable Transportation
